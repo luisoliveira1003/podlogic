@@ -6,7 +6,8 @@
 
 :root {
   --text: #ffffff;
-  --background: #27657f;
+  --background-indoor: #27657f;
+  --background-external: linear-gradient(243.18deg, #244857 0%, #1d546b 100%);
   --highlight: #4dc1f2;
 }
 
@@ -23,7 +24,7 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--background-external);
   color: var(--text);
 }
 
