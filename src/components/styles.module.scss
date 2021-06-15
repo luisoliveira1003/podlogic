@@ -1,14 +1,3 @@
-.contentContainer {
-  max-width: 768px;
-  max-height: 418px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.contentPodcast {
-  margin-top: 303px;
-}
-
 .bgPodcast {
   position: absolute;
 }
@@ -94,4 +83,51 @@
   line-height: 19px;
   color: var(--highlight);
   cursor: pointer;
+}
+
+.contentEpisodes {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #15475b;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0d3241;
+  }
+
+  span {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 8px;
+    line-height: 9px;
+    letter-spacing: 0.46em;
+
+    opacity: 0.5;
+  }
+}
+
+.test {
+  margin-top: 0.687rem;
+  width: 30rem;
+  height: 16rem;
+  overflow-y: scroll;
+}
+
+.listEpisodes {
+  width: 24.687rem;
+
+  margin-right: 2.125rem;
+  list-style: none;
 }

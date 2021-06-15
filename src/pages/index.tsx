@@ -1,5 +1,7 @@
 import Head from "next/head";
 import React from "react";
+import Banner from "../components/Banner";
+import Podcast from "../components/Podcast";
 
 import styles from "./home.module.scss";
 
@@ -12,15 +14,9 @@ export default function Home() {
 
       <main className={styles.contentContainer}>
         <section className={styles.contentPodcast}>
-          <div className={styles.bgPodcast}>
-            <img src="/images/img-bg.svg" alt="Headphone" />
-            <div className={styles.bgBorder}>
-              <h1>Podlogic</h1>
-              <p>6 episódios</p>
-            </div>
-          </div>
+          <Banner />
 
-          <div className={styles.infoPodcast}></div>
+          <Podcast />
         </section>
       </main>
     </>
