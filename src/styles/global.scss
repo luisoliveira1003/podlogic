@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
 }
 
 :root {
@@ -13,20 +15,19 @@
   --gray-100: #e1e1e6;
 }
 
-@media (min-width: 1080px) {
+@media (max-width: 1080px) {
   html {
     font-size: 93.75%;
   }
 }
 
-@media (min-width: 720px) {
+@media (max-width: 720px) {
   html {
     font-size: 87.5%;
   }
 }
 
 body {
-  background: var(--background-external);
   color: var(--text);
 }
 

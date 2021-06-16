@@ -12,13 +12,13 @@ export default function Home() {
         <title>Home | Podlogic</title>
       </Head>
 
-      <main className={styles.contentContainer}>
-        <section className={styles.contentPodcast}>
+      <div className={styles.contentContainer}>
+        <div className={styles.contentPodcast}>
           <Banner />
 
           <Podcast />
-        </section>
-      </main>
+        </div>
+      </div>
     </>
   );
 }

@@ -31,6 +31,9 @@ export default function AboutPodcast() {
           Somos um grupo de amigos que gosta de se reunir e trocar ideias sobre
           como o mundo está transitando entre o antigo e o novo e tudo o que
           está mudando. Falamos sobre tecnologia, trabalho, lazer e nerdices.
+          Somos um grupo de amigos que gosta de se reunir e trocar ideias sobre
+          como o mundo está transitando entre o antigo e o novo e tudo o que
+          está mudando. Falamos sobre tecnologia, trabalho, lazer e nerdices.
         </p>
       </div>
 
