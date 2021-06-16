@@ -162,6 +162,12 @@
 
   li {
     display: flex;
+    cursor: pointer;
+
+    img {
+      width: 4.375rem;
+      height: 4.375rem;
+    }
 
     p {
       margin-left: 0.875rem;
