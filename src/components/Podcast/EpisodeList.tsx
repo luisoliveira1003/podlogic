@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
-import styles from "../styles.module.scss";
+import styles from "./podcast.module.scss";
 import { EpisodeItem } from "./EpisodeItem";
 
 export function EpisodeList() {

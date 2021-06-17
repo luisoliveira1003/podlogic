@@ -1,0 +1,72 @@
+.contentContainer {
+  width: 48rem;
+  height: 6.75rem;
+  margin-top: 2rem;
+  background-color: #15475b;
+  border-radius: 0px 0px 8px 8px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress {
+  //width: 32.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+
+  span {
+    display: inline-block;
+    //text-align: center;
+
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.187rem;
+    opacity: 0.5;
+  }
+
+  .slider {
+    flex: 1;
+    width: 26rem;
+    // height: 4px;
+    // background-color: #ffffff;
+    // border-radius: 6px;
+    // opacity: 0.2;
+
+    .emptySlider {
+      width: 26rem;
+      height: 4px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      opacity: 0.2;
+    }
+  }
+}
+
+.buttons {
+  height: 6.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+  gap: 1rem;
+
+  button {
+    background: transparent;
+    border: 0;
+    font-size: 0;
+
+    &.playButton {
+
+      transition: 0.2s;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+  }
+
+  
+}

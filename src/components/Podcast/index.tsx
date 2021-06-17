@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles.module.scss";
+import styles from "./podcast.module.scss";
 import AboutPodcast from "./AboutPodcast";
 import { EpisodeList } from "./EpisodeList";
 

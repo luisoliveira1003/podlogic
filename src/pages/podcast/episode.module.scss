@@ -1,0 +1,132 @@
+.contentEpisode {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-external);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.episode {
+  width: 48rem;
+  height: 26.125rem;
+  background: var(--background-indoor);
+  border-radius: 8px 8px 8px 8px;
+}
+
+.detailsEpisode {
+  display: flex;
+
+  img {
+    width: 15.625rem;
+    height: 15.625rem;
+    margin-top: 1.75rem;
+    margin-left: 2rem;
+
+    border-radius: 4px;
+  }
+}
+
+.aboutEpisode {
+  width: 25.875rem;
+  height: 6.187rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+
+  h1 {
+    width: 23.75rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  p {
+    margin-top: 0.812rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.readMore1 {
+  height: 4rem;
+  margin-bottom: -1rem;
+
+  &.previewEpisode {
+    background: linear-gradient(var(--gray-100), transparent);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.readMore2 {
+  display: none;
+
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  // ::-webkit-scrollbar-track {
+  //   // box-shadow: inset 0 0 5px grey;
+  //   // border-radius: 0.625rem;
+  // }
+
+  ::-webkit-scrollbar-thumb {
+    background: #15475b;
+    border-radius: 0.625rem;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0d3241;
+  }
+
+  p {
+    width: 26.187rem;
+
+    height: 6rem;
+    overflow-y: scroll;
+  }
+}
+
+.btnReadMore {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.187rem;
+  color: var(--highlight);
+  cursor: pointer;
+
+  img {
+    width: 1rem;
+    height: 1rem;
+    margin-left: -0.01rem;
+  }
+}
+
+.participants {
+  margin-top: 2rem;
+
+  p {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+
+    opacity: 0.5;
+  }
+}
+
+.imgClose {
+  width: 48rem;
+  position: absolute;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  img {
+    margin-top: 1.25rem;
+    margin-right: 1.25rem;
+    cursor: pointer;
+  }
+}

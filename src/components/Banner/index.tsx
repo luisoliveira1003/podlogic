@@ -1,4 +1,5 @@
-import styles from "../styles.module.scss";
+// import styles from "../Podcast/podcast.module.scss";
+import styles from "./banner.module.scss";
 
 export default function Banner() {
   return (

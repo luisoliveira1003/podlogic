@@ -1,4 +1,4 @@
-import styles from "../styles.module.scss";
+import styles from "./podcast.module.scss";
 
 export default function AboutPodcast() {
   function handleReadMore() {
