@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { convertDurationToTimeString } from "../../utils/convertDurationToTimeString";
 
 interface IEpisodeItemProps {
   episodes: {
@@ -12,18 +13,18 @@ interface IEpisodeItemProps {
 }
 
 export function EpisodeItem(props: IEpisodeItemProps) {
-  function readableDuration(seconds) {
-    let sec;
-    let min;
+  // function readableDuration(seconds) {
+  //   let sec;
+  //   let min;
 
-    sec = Math.floor(seconds);
-    min = Math.floor(sec / 60);
+  //   sec = Math.floor(seconds);
+  //   min = Math.floor(sec / 60);
 
-    min = min >= 10 ? min : "0" + min;
-    sec = Math.floor(sec % 60);
-    sec = sec >= 10 ? sec : "0" + sec;
-    return min + ":" + sec;
-  }
+  //   min = min >= 10 ? min : "0" + min;
+  //   sec = Math.floor(sec % 60);
+  //   sec = sec >= 10 ? sec : "0" + sec;
+  //   return min + ":" + sec;
+  // }
 
   return (
     <Link href={`/podcast/${props.episodes.id}`}>
@@ -33,7 +34,7 @@ export function EpisodeItem(props: IEpisodeItemProps) {
           Episódio
           {` ${props.episodes.episodeNumber} - ${props.episodes.name}`}
           <br />
-          <span>{readableDuration(props.episodes.duration)}</span>
+          <span>{convertDurationToTimeString(props.episodes.duration)}</span>
         </p>
       </li>
     </Link>

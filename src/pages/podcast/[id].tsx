@@ -17,9 +17,9 @@ interface IEpisodeProps {
 }
 
 export default function Podcast() {
-  const { query } = useRouter();
-
   const [episode, setEpisode] = useState<IEpisodeProps>();
+
+  const { query } = useRouter();
 
   useEffect(() => {
     if (query.id) {

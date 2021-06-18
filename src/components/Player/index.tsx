@@ -6,6 +6,7 @@ import { api } from "../../services/api";
 
 import styles from "./player.module.scss";
 import "rc-slider/assets/index.css";
+import { convertDurationToTimeString } from "../../utils/convertDurationToTimeString";
 
 interface IEpisodeProps {
   name: string;
@@ -23,6 +24,7 @@ export function Player() {
 
   const [episode, setEpisode] = useState<IEpisodeProps>();
   const [isPlaying, setIsPlaying] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (query.id) {
@@ -52,21 +54,35 @@ export function Player() {
     setIsPlaying(state);
   }
 
+  function setupProgressListener() {
+    audioRef.current.currentTime = 0;
+
+    audioRef.current.addEventListener("timeupdate", () => {
+      setProgress(Math.floor(audioRef.current?.currentTime));
+    });
+  }
+
+  function handleSeek(amount: number) {
+    audioRef.current.currentTime = amount;
+    setProgress(amount);
+  }
+
   return (
     <footer className={styles.contentContainer}>
       <div className={styles.progress}>
-        <span>00:00</span>
+        <span>{convertDurationToTimeString(progress)}</span>
         <div className={styles.slider}>
           <Slider
-            trackStyle={{
-              backgroundColor: "#2FA0D0",
-            }}
+            max={episode?.duration}
+            value={progress}
+            onChange={handleSeek}
+            trackStyle={{ backgroundColor: "#2FA0D0" }}
             railStyle={{ opacity: "0.2" }}
             handleStyle={{ display: "none" }}
           />
           {/* <div className={styles.emptySlider} /> */}
         </div>
-        <span>00:00</span>
+        <span>{convertDurationToTimeString(episode?.duration)}</span>
       </div>
 
       {episode && (
@@ -76,11 +92,12 @@ export function Player() {
           autoPlay
           onPlay={() => setPlayingState(true)}
           onPause={() => setPlayingState(false)}
+          onLoadedMetadata={setupProgressListener}
         />
       )}
 
       <div className={styles.buttons}>
-        <button type="button">
+        <button type="button" disabled>
           <img src="/images/icons/previous.svg" alt="Tocar anterior" />
         </button>
         <button
@@ -94,7 +111,7 @@ export function Player() {
             <img src="/images/icons/play.svg" alt="Tocar" />
           )}
         </button>
-        <button type="button">
+        <button type="button" disabled>
           <img src="/images/icons/next.svg" alt="Tocar próximo" />
         </button>
       </div>
