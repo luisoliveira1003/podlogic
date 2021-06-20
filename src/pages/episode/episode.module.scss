@@ -13,11 +13,9 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-
     background: var(--background-indoor);
 
     footer {
-      
       margin-top: 16.5rem;
     }
   }
@@ -67,30 +65,6 @@
     }
   }
 }
-
-// .detailsEpisode {
-//   display: flex;
-
-//   img {
-//     width: 15.625rem;
-//     height: 15.625rem;
-//     margin-top: 1.75rem;
-//     margin-left: 2rem;
-
-//     border-radius: 4px;
-//   }
-
-//   @media (max-width: 375px) {
-//     width: 100vw;
-//     margin: 0;
-//     display: flex;
-//     flex-direction: column;
-
-//     img {
-//       width: 100%;
-//     }
-//   }
-// }
 
 .imageCover {
   width: 15.625rem;

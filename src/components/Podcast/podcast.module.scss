@@ -1,9 +1,7 @@
 .infoPodcast {
-  //position: absolute;
   width: 28.312rem;
   height: 26.125rem;
   margin-left: 1rem;
-
   border-radius: 0px 8px 8px 0px;
 
   @media (max-width: 375px) {
@@ -128,7 +126,6 @@
     font-size: 0.5rem;
     line-height: 0.562rem;
     letter-spacing: 0.46em;
-    margin-left: 1.5rem;
     margin-top: 1rem;
 
     opacity: 0.5;
@@ -147,6 +144,10 @@
   @media (max-width: 375px) {
     width: 23.437rem;
     margin: 0;
+
+    h1 {
+      margin-left: 1.5rem;
+    }
   }
 }
 
@@ -200,7 +201,6 @@
   @media (max-width: 375px) {
     width: 20rem;
     height: 21rem;
-
     margin-left: 1.5rem;
     margin-top: 1rem;
   }

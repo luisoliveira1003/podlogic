@@ -3,17 +3,12 @@
   height: 100vh;
   background: var(--background-external);
   display: flex;
-  //flex-direction: row;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 375px) {
     width: 100vw;
     height: 100vh;
-
-    //justify-content: flex-start;
-
-    //display: flex;
     flex-direction: column;
     background: none;
   }
@@ -22,7 +17,6 @@
 .contentBanner {
   width: 19.687rem;
   height: 26.125rem;
-
   display: flex;
 
   img {
@@ -49,7 +43,6 @@
   @media (max-width: 375px) {
     width: 100%;
     height: 21rem;
-
     border-radius: 0px;
   }
 }
