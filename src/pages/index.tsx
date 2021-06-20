@@ -13,9 +13,11 @@ export default function Home() {
       </Head>
 
       <div className={styles.contentContainer}>
-        <div className={styles.contentPodcast}>
+        <div className={styles.contentBanner}>
           <Banner />
+        </div>
 
+        <div className={styles.contentPodcast}>
           <Podcast />
         </div>
       </div>

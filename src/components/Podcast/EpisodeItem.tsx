@@ -1,40 +1,23 @@
 import Link from "next/link";
+import { IEpisodeProps, IPodcastProps } from "../../types";
 import { convertDurationToTimeString } from "../../utils/convertDurationToTimeString";
 
-interface IEpisodeItemProps {
-  episodes: {
-    id: number;
-    name: string;
-    cover: string;
-    details: string;
-    duration: number;
-    episodeNumber: number;
-  };
-}
-
-export function EpisodeItem(props: IEpisodeItemProps) {
-  // function readableDuration(seconds) {
-  //   let sec;
-  //   let min;
-
-  //   sec = Math.floor(seconds);
-  //   min = Math.floor(sec / 60);
-
-  //   min = min >= 10 ? min : "0" + min;
-  //   sec = Math.floor(sec % 60);
-  //   sec = sec >= 10 ? sec : "0" + sec;
-  //   return min + ":" + sec;
-  // }
-
+export function EpisodeItem({
+  id,
+  name,
+  duration,
+  episodeNumber,
+  cover,
+}: IEpisodeProps) {
   return (
-    <Link href={`/podcast/${props.episodes.id}`}>
+    <Link href={`/episode/${id}`}>
       <li>
-        <img src={props.episodes.cover} />
+        <img src={cover} />
         <p>
           Episódio
-          {` ${props.episodes.episodeNumber} - ${props.episodes.name}`}
+          {` ${episodeNumber} - ${name}`}
           <br />
-          <span>{convertDurationToTimeString(props.episodes.duration)}</span>
+          <span>{convertDurationToTimeString(duration)}</span>
         </p>
       </li>
     </Link>

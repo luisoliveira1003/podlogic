@@ -10,6 +10,7 @@
   --text: #ffffff;
   --background-indoor: #27657f;
   --background-external: linear-gradient(243.18deg, #244857 0%, #1d546b 100%);
+  --background-mobile: linear-gradient(180deg, #244857 0%, #287393 100%);
   --highlight: #4dc1f2;
 
   --gray-100: #e1e1e6;
@@ -24,6 +25,12 @@
 @media (max-width: 720px) {
   html {
     font-size: 87.5%;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 100%;
   }
 }
 

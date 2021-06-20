@@ -7,16 +7,7 @@ import { api } from "../../services/api";
 import styles from "./player.module.scss";
 import "rc-slider/assets/index.css";
 import { convertDurationToTimeString } from "../../utils/convertDurationToTimeString";
-
-interface IEpisodeProps {
-  name: string;
-  description: string;
-  duration: number;
-  participants: string[];
-  episodeNumber: number;
-  cover: string;
-  audio: string;
-}
+import { IEpisodeProps } from "../../types";
 
 export function Player() {
   const { query } = useRouter();
@@ -80,7 +71,6 @@ export function Player() {
             railStyle={{ opacity: "0.2" }}
             handleStyle={{ display: "none" }}
           />
-          {/* <div className={styles.emptySlider} /> */}
         </div>
         <span>{convertDurationToTimeString(episode?.duration)}</span>
       </div>
