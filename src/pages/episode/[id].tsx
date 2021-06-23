@@ -6,6 +6,7 @@ import { Player } from "../../components/Player";
 import { api } from "../../services/api";
 import { IEpisodeProps } from "../../types";
 import { handleReadMore } from "../../utils/handleReadMore";
+import { formatArrayParticipants } from "../../utils/formatArrayParticipants";
 import styles from "./episode.module.scss";
 
 export default function Episode() {
@@ -20,6 +21,8 @@ export default function Episode() {
       });
     }
   }, [query.id]);
+
+  let tam = 0;
 
   return (
     <>
@@ -69,14 +72,14 @@ export default function Episode() {
             </div>
 
             <div className={styles.participants}>
-              <p>Participantes: {episode?.participants.join(", ")}</p>
+              <p>
+                Participantes: {formatArrayParticipants(episode?.participants)}
+              </p>
             </div>
           </div>
         </div>
 
-        
-          <Player />
-        
+        <Player />
       </div>
     </>
   );
